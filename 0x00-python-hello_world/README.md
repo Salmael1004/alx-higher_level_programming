@@ -83,6 +83,6 @@ Namespaces are one honking great idea -- let's do more of those!
 
 `Pycodestyle` is now the [**new standard of Python style code**](https://github.com/PyCQA/pycodestyle/issues/466)
 
-![python](/python.png)
+![python](https://github.com/Salmael1004/alx-higher_level_programming/assets/125903766/9fccef34-4bfd-40da-988d-bd1bb7a90bb9)
 
 
