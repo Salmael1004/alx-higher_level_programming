@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-for digit in range(0, 9):
-    for duo in range(digit + 1, 10):
-        print("{:d}{:d}".format(digit, duo), end=', ')
-print("{:d}{:d}".format(digit + 1, duo))
+for num1 in range(0, 9):
+    for num2 in range(num1 + 1, 10):
+        if num1 == 8:
+            print("{}{}".format(num1, num2))
+        else:
+            print("{}{}".format(num1, num2), end=", ")
