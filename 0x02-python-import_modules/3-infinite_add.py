@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-from sys import argv
-dice = 0
-for s in argv[1:]:
-    dice += int(s)
-print("{:d}".format(dice))
+if __name__ == "__main__":
+    import sys
+    dice = 0
+    for i in range(len(sys.argv) - 1):
+	    dice += int(sys.argv[i + 1])
+    print("{}".format(dice))
