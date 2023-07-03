@@ -1,58 +1,58 @@
 #!/usr/bin/python3
 """
-Create Rectangle
+Create Rectangle.
 """
 
 
 class Rectangle:
-    """Define rectangle"""
-
+    """Define rectangle."""
     def __init__(self, width=0, height=0):
-        """Initialize data"""
-        self._width = width
-        self._height = height
+        """Initialize data."""
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
-        """Get width"""
-        return self._width
+        """getter for width."""
+        return self.__width
 
     @width.setter
     def width(self, value):
-        """Set width"""
+        """setter for width."""
         if type(value) is not int:
-            raise TypeError("Width must be an integer")
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise ValueError("Width must be >= 0")
-        self._width = value
+            raise ValueError("width must be >= 0")
+        self.__width = value
 
     @property
     def height(self):
-        """Get height"""
-        return self._height
+        """getter for height."""
+        return self.__height
 
     @height.setter
     def height(self, value):
-        """Set height"""
+        """setter for height."""
         if type(value) is not int:
-            raise TypeError("Height must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("Height must be >= 0")
-        self._height = value
+            raise ValueError("height must be >= 0")
+        self.__height = value
 
     def area(self):
-        """Return rectangle area"""
-        return self._width * self._height
+        """area of rectangle."""
+        return self.__width * self.__height
 
     def perimeter(self):
-        """Return rectangle perimeter"""
-        return 2 * (self._width + self._height)
+        """perimeter of rectangle."""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
-        """Print rectangle"""
-        if self._width == 0 or self._height == 0:
-            return ""
-        rectangle_str = ""
-        for _ in range(self._height):
-            rectangle_str += "#" * self._width + "\n"
-        return rectangle_str
+        """print rectangle."""
+        string = ""
+        if self.__width != 0 and self.__height != 0:
+            string += "\n".join("#" * self.__width
+                                for j in range(self.__height))
+        return string
